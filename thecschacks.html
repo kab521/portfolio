@@ -1,0 +1,618 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Kathryn Bager</title>
+  <link rel="icon" type="image/x-icon" href="https://i.imgur.com/Fy0CZlL.png">
+  <link rel="stylesheet" href="tester.css">
+</head>
+
+
+<div class="header">
+<div id="app">
+   <main>
+      <div>
+         <div>
+            <h1 id="typewriter">
+               </span><span> </span><span>K</span><span>a</span><span>t</span><span>h</span><span>r</span><span>y</span><span>n</span></span> <span>B</span><span>a</span><span>g</span><span>e<span>r</span></span>
+            </h1>
+         </div>
+      </div>
+</div>
+</div>
+
+
+<div class="topnav" style="text-align: center;">
+   
+<a class="apple" href="index.html"> Home </a>
+<a class="apple" href="graphic.html"> Work </a>
+<a class="apple" href="Resume.pdf" target="_blank">Resume</a>
+
+</div>
+   <head>
+      <meta charset="UTF-8" />
+
+      <div class="background-container">
+         <style>
+            #typewriter span {
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            }
+            #ima h1,
+            #ima h1 {
+                display: inline;
+            }
+        
+         </style>
+      </div>
+   </head>
+   </body>
+<br>
+
+<center>
+    
+
+    </div>
+    </div>
+
+</center>
+
+   <script>
+      var TxtType = function(el, toRotate, period) {
+              this.toRotate = toRotate;
+              this.el = el;
+              this.loopNum = 0;
+              this.period = parseInt(period, 10) || 2000;
+              this.txt = '';
+              this.tick();
+              this.isDeleting = false;
+          };
+      
+          TxtType.prototype.tick = function() {
+              var i = this.loopNum % this.toRotate.length;
+              var fullTxt = this.toRotate[i];
+      
+              if (this.isDeleting) {
+              this.txt = fullTxt.substring(0, this.txt.length - 1);
+              } else {
+              this.txt = fullTxt.substring(0, this.txt.length + 1);
+              }
+      
+        
+              setTimeout(function() {
+              that.tick();
+              }, delta);
+          };
+
+      
+          document.addEventListener("DOMContentLoaded", function() {
+                 const letters = document.querySelectorAll("#typewriter span");
+                 let delay = 500; 
+               
+                 function typeWriterEffect() {
+                   letters.forEach((span, index) => {
+                     setTimeout(() => {
+                       span.style.opacity = 1;
+                     }, delay + (index * 100)); 
+                   });
+               
+                 }
+               
+                 typeWriterEffect(); 
+               });
+      
+   </script>
+   </body>
+</html>
+
+<style>
+
+body {
+  color: #003049;
+  flex-direction: column;
+  font-family: 'Gill Sans', sans-serif;      
+  background-color: #fff;
+}
+
+p {
+  margin: 50px;
+}
+
+body, .parent-container, .child-container {
+  display: flex;
+}
+.parent-container {
+  width: 100%;
+  justify-content: center;
+  gap: 30px 30px;
+}
+.child-container {
+  width: 30%;
+  height: auto;
+  gap: 30px 30px;
+  flex-direction: column;
+}
+.child-container img {
+  transition: all 1s ease-in-out 0s;
+ box-shadow: 2px 2px 20px gray, inset 2px 2px 10px lightgray;
+}
+.child-container img:hover {
+  box-shadow: 4px 4px 25px #669BBC;
+ 
+}
+
+.greeting {
+  text-align: center;
+  color: lightblue;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 30px;
+}
+.fa-brands {
+  font-size: 50px;
+}
+.greeting, .fa-brands {
+  text-shadow: 2px 2px 10px lightgray;
+  
+}
+
+</style>
+
+<center>
+<h1>CSC Hacks</h1>
+<p>CSC Hacks represents the annual Hackathon organized by the Pitt Computer Science Club, typically held in the Fall semester. As part of an initiative to enhance branding consistency and school spirit, I spearheaded the redesign of the logo, incorporating a panther, aligning it with our school’s mascot.</p>
+</center>
+<br><br><br>
+<script src="https://kit.fontawesome.com/ee7a178a15.js" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Opan+Sans">
+<div class="parent-container">
+  <div class="child-container" id="one">
+
+    <img id="myImg" src="https://i.imgur.com/gQ5MnEw.png" alt="Logo" width="100%" height="auto">
+        <div id="myModal" class="modal">
+          <span class="close">&times;</span>
+          <img class="modal-content" id="logo">
+          <div id="caption"></div>
+        </div>
+
+
+        <img id="myposter" src="https://i.imgur.com/JFaTw6h.png" alt="First sketch" width="100%" height="auto">
+        <div id="mymodalposter" class="modal">
+          <span class="close">&times;</span>
+          <img class="modal-content" id="poster">
+          <div id="caption"></div>
+        </div>
+
+
+        <br>
+        <br>
+        <br>
+        <br>
+  
+
+  </div>
+    <div class="child-container" id="two">
+
+      <img id="mybanner" src="https://i.imgur.com/EYNqLn4.png" alt="Outline" style="width:100%;max-width:300px">
+        
+      <div id="mymodalbanner" class="modal">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="banner">
+        <div id="caption"></div>
+      </div>
+      
+     
+        <img id="myvision" src="https://i.imgur.com/NShMa3e.jpeg" alt="Branding board" style="width:100%;max-width:300px">
+        
+        <div id="mymodalvision" class="modal">
+          <span class="close">&times;</span>
+          <img class="modal-content" id="vision">
+          <div id="caption"></div>
+        </div>
+
+    <style>
+
+        #myvision {
+          border-radius: 5px;
+          cursor: pointer;
+          transition: 0.3s;
+        }
+        
+        #myvision:hover {opacity: 0.7;}
+        
+        .modal {
+          display: none; 
+          position: fixed; 
+          z-index: 1; 
+          padding-top: 100px; 
+          left: 0;
+          top: 0;
+          width: 100%; 
+          height: 100%; 
+          overflow: auto; 
+          background-color: rgb(0,0,0);
+          background-color: rgba(0,0,0,0.9); 
+        }
+        
+        .modal-content {
+          margin: auto;
+          display: block;
+          width: 80%;
+          max-width: 700px;
+        }
+        
+        #caption {
+          margin: auto;
+          display: block;
+          width: 80%;
+          max-width: 700px;
+          text-align: center;
+          color: #ccc;
+          padding: 10px 0;
+          height: 150px;
+        }
+        
+        .modal-content, #caption {  
+          -webkit-animation-name: zoom;
+          -webkit-animation-duration: 0.6s;
+          animation-name: zoom;
+          animation-duration: 0.6s;
+        }
+        
+        @-webkit-keyframes zoom {
+          from {-webkit-transform:scale(0)} 
+          to {-webkit-transform:scale(1)}
+        }
+        
+        @keyframes zoom {
+          from {transform:scale(0)} 
+          to {transform:scale(1)}
+        }
+        
+        .close {
+          position: absolute;
+          top: 15px;
+          right: 35px;
+          color: #f1f1f1;
+          font-size: 40px;
+          font-weight: bold;
+          transition: 0.3s;
+        }
+        
+        .close:hover,
+        .close:focus {
+          color: #bbb;
+          text-decoration: none;
+          cursor: pointer;
+        }
+        
+        @media only screen and (max-width: 700px){
+          .modal-content {
+            width: 100%;
+          }
+        }
+        </style>
+        
+        <script>
+        var modal = document.getElementById("mymodalvision");
+        
+        var img = document.getElementById("myvision");
+        var modalImg = document.getElementById("logo");
+        var captionText = document.getElementById("caption");
+        img.onclick = function(){
+          modal.style.display = "block";
+          modalImg.src = this.src;
+          captionText.innerHTML = this.alt;
+        }
+        
+        var span = document.getElementsByClassName("close")[0];
+        
+        span.onclick = function() { 
+          modal.style.display = "none";
+        }
+        </script>
+
+ 
+    <style>
+
+        #mybanner {
+          border-radius: 5px;
+          cursor: pointer;
+          transition: 0.3s;
+        }
+        
+        #mybanner:hover {opacity: 0.7;}
+        
+        .modal {
+          display: none; 
+          position: fixed; 
+          z-index: 1; 
+          padding-top: 100px; 
+          left: 0;
+          top: 0;
+          width: 100%; 
+          height: 100%; 
+          overflow: auto; 
+          background-color: rgb(0,0,0);
+          background-color: rgba(0,0,0,0.9); 
+        }
+        
+        .modal-content {
+          margin: auto;
+          display: block;
+          width: 80%;
+          max-width: 700px;
+        }
+        
+        #caption {
+          margin: auto;
+          display: block;
+          width: 80%;
+          max-width: 700px;
+          text-align: center;
+          color: #ccc;
+          padding: 10px 0;
+          height: 150px;
+        }
+        
+        .modal-content, #caption {  
+          -webkit-animation-name: zoom;
+          -webkit-animation-duration: 0.6s;
+          animation-name: zoom;
+          animation-duration: 0.6s;
+        }
+        
+        @-webkit-keyframes zoom {
+          from {-webkit-transform:scale(0)} 
+          to {-webkit-transform:scale(1)}
+        }
+        
+        @keyframes zoom {
+          from {transform:scale(0)} 
+          to {transform:scale(1)}
+        }
+        
+        .close {
+          position: absolute;
+          top: 15px;
+          right: 35px;
+          color: #f1f1f1;
+          font-size: 40px;
+          font-weight: bold;
+          transition: 0.3s;
+        }
+        
+        .close:hover,
+        .close:focus {
+          color: #bbb;
+          text-decoration: none;
+          cursor: pointer;
+        }
+        
+        @media only screen and (max-width: 700px){
+          .modal-content {
+            width: 100%;
+          }
+        }
+        </style>
+        
+        <script>
+        var modal = document.getElementById("mymodalbanner");
+        
+        var img = document.getElementById("mybanner");
+        var modalImg = document.getElementById("logo");
+        var captionText = document.getElementById("caption");
+        img.onclick = function(){
+          modal.style.display = "block";
+          modalImg.src = this.src;
+          captionText.innerHTML = this.alt;
+        }
+        
+        var span = document.getElementsByClassName("close")[0];
+        
+        span.onclick = function() { 
+          modal.style.display = "none";
+        }
+        </script>
+    
+    <style>
+
+        #myposter {
+          border-radius: 5px;
+          cursor: pointer;
+          transition: 0.3s;
+        }
+        
+        #myposter:hover {opacity: 0.7;}
+        
+        .modal {
+          display: none; 
+          position: fixed; 
+          z-index: 1; 
+          padding-top: 100px; 
+          left: 0;
+          top: 0;
+          width: 100%; 
+          height: 100%; 
+          overflow: auto; 
+          background-color: rgb(0,0,0);
+          background-color: rgba(0,0,0,0.9); 
+        }
+        
+        .modal-content {
+          margin: auto;
+          display: block;
+          width: 80%;
+          max-width: 700px;
+        }
+        
+        #caption {
+          margin: auto;
+          display: block;
+          width: 80%;
+          max-width: 700px;
+          text-align: center;
+          color: #ccc;
+          padding: 10px 0;
+          height: 150px;
+        }
+        
+        .modal-content, #caption {  
+          -webkit-animation-name: zoom;
+          -webkit-animation-duration: 0.6s;
+          animation-name: zoom;
+          animation-duration: 0.6s;
+        }
+        
+        @-webkit-keyframes zoom {
+          from {-webkit-transform:scale(0)} 
+          to {-webkit-transform:scale(1)}
+        }
+        
+        @keyframes zoom {
+          from {transform:scale(0)} 
+          to {transform:scale(1)}
+        }
+        
+        .close {
+          position: absolute;
+          top: 15px;
+          right: 35px;
+          color: #f1f1f1;
+          font-size: 40px;
+          font-weight: bold;
+          transition: 0.3s;
+        }
+        
+        .close:hover,
+        .close:focus {
+          color: #bbb;
+          text-decoration: none;
+          cursor: pointer;
+        }
+        
+        @media only screen and (max-width: 700px){
+          .modal-content {
+            width: 100%;
+          }
+        }
+        </style>
+        
+        <script>
+        var modal = document.getElementById("mymodalposter");
+        
+        var img = document.getElementById("myposter");
+        var modalImg = document.getElementById("logo");
+        var captionText = document.getElementById("caption");
+        img.onclick = function(){
+          modal.style.display = "block";
+          modalImg.src = this.src;
+          captionText.innerHTML = this.alt;
+        }
+        
+        var span = document.getElementsByClassName("close")[0];
+        
+        span.onclick = function() { 
+          modal.style.display = "none";
+        }
+        </script>
+
+    <style>
+
+        #myImg {
+          border-radius: 5px;
+          cursor: pointer;
+          transition: 0.3s;
+        }
+        
+        #myImg:hover {opacity: 0.7;}
+        
+        .modal {
+          display: none; 
+          position: fixed; 
+          z-index: 1; 
+          padding-top: 100px; 
+          left: 0;
+          top: 0;
+          width: 100%; 
+          height: 100%; 
+          overflow: auto; 
+          background-color: rgb(0,0,0);
+          background-color: rgba(0,0,0,0.9); 
+        }
+        
+        .modal-content {
+          margin: auto;
+          display: block;
+          width: 80%;
+          max-width: 700px;
+        }
+        
+        #caption {
+          margin: auto;
+          display: block;
+          width: 80%;
+          max-width: 700px;
+          text-align: center;
+          color: #ccc;
+          padding: 10px 0;
+          height: 150px;
+        }
+        
+        .modal-content, #caption {  
+          -webkit-animation-name: zoom;
+          -webkit-animation-duration: 0.6s;
+          animation-name: zoom;
+          animation-duration: 0.6s;
+        }
+        
+        @-webkit-keyframes zoom {
+          from {-webkit-transform:scale(0)} 
+          to {-webkit-transform:scale(1)}
+        }
+        
+        @keyframes zoom {
+          from {transform:scale(0)} 
+          to {transform:scale(1)}
+        }
+        
+        .close {
+          position: absolute;
+          top: 15px;
+          right: 35px;
+          color: #f1f1f1;
+          font-size: 40px;
+          font-weight: bold;
+          transition: 0.3s;
+        }
+        
+        .close:hover,
+        .close:focus {
+          color: #bbb;
+          text-decoration: none;
+          cursor: pointer;
+        }
+        
+        @media only screen and (max-width: 700px){
+          .modal-content {
+            width: 100%;
+          }
+        }
+        </style>
+        
+        <script>
+        var modal = document.getElementById("myModal");
+        
+        var img = document.getElementById("myImg");
+        var modalImg = document.getElementById("logo");
+        var captionText = document.getElementById("caption");
+        img.onclick = function(){
+          modal.style.display = "block";
+          modalImg.src = this.src;
+          captionText.innerHTML = this.alt;
+        }
+        
+        var span = document.getElementsByClassName("close")[0];
+        
+        span.onclick = function() { 
+          modal.style.display = "none";
+        }
+        </script>
