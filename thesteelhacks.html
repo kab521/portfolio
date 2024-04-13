@@ -271,7 +271,7 @@ body, .parent-container, .child-container {
             </style>
             
     
-         <style>
+         <style><!--shirt style-->
 
         #theshirts {
           border-radius: 5px;
@@ -354,7 +354,7 @@ body, .parent-container, .child-container {
         }
         </style>
         
-        <script>
+        <script><!--shirt script-->
         var modal = document.getElementById("mymodalshirts");
         
         var img = document.getElementById("theshirts");
@@ -371,37 +371,18 @@ body, .parent-container, .child-container {
         span.onclick = function() { 
           modal.style.display = "none";
         }
-        </script>
-
-
-         <script>
-        var modal = document.getElementById("mymodalsocial");
+        </script>        
         
-        var img = document.getElementById("social");
-        var modalImg = document.getElementById("logo");
-        var captionText = document.getElementById("caption");
-        img.onclick = function(){
-          modal.style.display = "block";
-          modalImg.src = this.src;
-          captionText.innerHTML = this.alt;
-        }
         
-        var span = document.getElementsByClassName("close")[0];
-        
-        span.onclick = function() { 
-          modal.style.display = "none";
-        }
-        </script>
-                     
-    <style>
+         <style><!--media style-->
 
-        #mysocial {
+        #social {
           border-radius: 5px;
           cursor: pointer;
           transition: 0.3s;
         }
         
-        #mysocial:hover {opacity: 0.7;}
+        #social:hover {opacity: 0.7;}
         
         .modal {
           display: none; 
@@ -476,7 +457,35 @@ body, .parent-container, .child-container {
         }
         </style>
         
-    <style>
+        <script><!--shirt script-->
+        var modal = document.getElementById("mymodalsocial");
+        
+        var img = document.getElementById("mysocial");
+        var modalImg = document.getElementById("logo");
+        var captionText = document.getElementById("caption");
+        img.onclick = function(){
+          modal.style.display = "block";
+          modalImg.src = this.src;
+          captionText.innerHTML = this.alt;
+        }
+        
+        var span = document.getElementsByClassName("close")[0];
+        
+        span.onclick = function() { 
+          modal.style.display = "none";
+        }
+        </script>     
+
+
+
+
+
+
+
+
+
+        
+    <style> <!--vision style-->
 
         #myvision {
           border-radius: 5px;
@@ -559,7 +568,7 @@ body, .parent-container, .child-container {
         }
         </style>
         
-        <script>
+        <script><!--vision script-->
         var modal = document.getElementById("mymodalvision");
         
         var img = document.getElementById("myvision");
@@ -579,7 +588,7 @@ body, .parent-container, .child-container {
         </script>
 
  
-    <style>
+    <style> <!--banner style-->
 
         #mybanner {
           border-radius: 5px;
@@ -662,7 +671,7 @@ body, .parent-container, .child-container {
         }
         </style>
         
-        <script>
+        <script> <!--banner script-->
         var modal = document.getElementById("mymodalbanner");
         
         var img = document.getElementById("mybanner");
@@ -681,7 +690,7 @@ body, .parent-container, .child-container {
         }
         </script>
     
-    <style>
+    <style> <!--poster style-->
 
         #myposter {
           border-radius: 5px;
@@ -764,7 +773,7 @@ body, .parent-container, .child-container {
         }
         </style>
         
-        <script>
+        <script> <!--poster script-->
         var modal = document.getElementById("mymodalposter");
         
         var img = document.getElementById("myposter");
@@ -783,7 +792,7 @@ body, .parent-container, .child-container {
         }
         </script>
 
-    <style>
+    <style>  <!--logo style-->
 
         #myImg {
           border-radius: 5px;
@@ -866,7 +875,7 @@ body, .parent-container, .child-container {
         }
         </style>
         
-        <script>
+        <script> <!--logo script-->
         var modal = document.getElementById("myModal");
         
         var img = document.getElementById("myImg");
