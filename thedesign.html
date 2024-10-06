@@ -104,14 +104,7 @@
    </body>
 </html>
 
-<center>
-    <h1>Design</h1>
-    <p>Visual design and illustration has always been an exciting way for me to interact with the intersection of art and technology. I enjoy exploring new mediums of design often.</p>
-    </center><br>
 
-
-
-    <!DOCTYPE html>
 <html>
 <head>
 <style>
@@ -145,28 +138,114 @@ margin-right: 488px;
 }
 
 </style>
+
+
+
+    <style>
+
+        .content {
+            padding: 10px;
+        }
+        .image-container {
+            display: inline-block;
+            margin: 10px;
+            text-align: center;
+        }
+
+        figcaption {
+            background-color: #669BBC;
+            color: #fff;
+            margin: 5px 0;
+            padding: 5px;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+    </style>
 </head>
 <body>
-   <div>
-      <img src="pokemon.png" height="800px", width="600px">
-      <figcaption class="fig">Adobe Illustrator, 2024</figcaption>
-    </div><br>
-<div>
-   <div>
-      <img src="pochacco.png" height="400px", width="600px">
-      <figcaption class="fig">Blender, 2024</figcaption>
-    </div><br>
-<div>
-    <img src="https://i.imgur.com/H9Vdj7w.png" height="400px", width="600px">
-    <figcaption class="fig">Blender, 2024</figcaption>
-  </div><br>
-<div>
-    <img src="https://i.imgur.com/JFS26U2.png" height="400px", width="500px">
-    <figcaption class="cap">Adobe Illustrator, 2024</figcaption>
-  </div><br>
-<br><br>
+
+
+
+<div class="content">
+    <h1>Design</h1>
+    <p>Visual design and illustration has always been an exciting way for me to interact with the intersection of art and technology. I enjoy exploring new mediums of design often.</p>
+
+    <div class="image-container">
+        <img src="pochacco.png" alt="Pochacco" height="400" width="600">
+        <figcaption>Blender, 2024</figcaption>
+    </div>
+
+    <div class="image-container">
+        <img src="https://i.imgur.com/H9Vdj7w.png" height="400" width="600">
+        <figcaption>Blender, 2024</figcaption>
+    </div>
+
+    <div class="image-container">
+      <img src="https://i.imgur.com/JFS26U2.png"  height="400" width="600">
+      <figcaption>Adobe Illustrator, 2024</figcaption>
   </div>
+
+  <div class="image-container">
+   <img src="pokemon.png" alt="Pokemon" height="300" width="300">
+   <figcaption>Adobe Illustrator, 2024</figcaption>
+  </div>
+
 </div>
+
+<script>
+    var TxtType = function(el, toRotate, period) {
+        this.toRotate = toRotate;
+        this.el = el;
+        this.loopNum = 0;
+        this.period = parseInt(period, 10) || 2000;
+        this.txt = '';
+        this.tick();
+        this.isDeleting = false;
+    };
+
+    TxtType.prototype.tick = function() {
+        var i = this.loopNum % this.toRotate.length;
+        var fullTxt = this.toRotate[i];
+
+        if (this.isDeleting) {
+            this.txt = fullTxt.substring(0, this.txt.length - 1);
+        } else {
+            this.txt = fullTxt.substring(0, this.txt.length + 1);
+        }
+
+        this.el.innerHTML = this.txt;
+
+        var delta = this.isDeleting ? 100 : 200 - Math.random() * 100;
+
+        if (!this.isDeleting && this.txt === fullTxt) {
+            delta = this.period;
+            this.isDeleting = true;
+        } else if (this.isDeleting && this.txt === '') {
+            this.isDeleting = false;
+            this.loopNum++;
+        }
+
+        setTimeout(() => this.tick(), delta);
+    };
+
+    document.addEventListener("DOMContentLoaded", function() {
+        const letters = document.querySelectorAll("#typewriter span");
+        let delay = 500; 
+        
+        function typeWriterEffect() {
+            letters.forEach((span, index) => {
+                setTimeout(() => {
+                    span.style.opacity = 1;
+                }, delay + (index * 100)); 
+            });
+        }
+
+        typeWriterEffect(); 
+    });
+</script>
 
 </body>
 </html>
+
